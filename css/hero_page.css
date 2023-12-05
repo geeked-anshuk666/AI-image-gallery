@@ -1,0 +1,264 @@
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@400;700&family=Sofia+Sans:ital@0;1&display=swap');
+
+
+/* resets */
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+	box-sizing: border-box;
+}
+
+
+/* styles – required */
+
+html,
+body {
+	height: 100%;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+	overflow: hidden;
+}
+
+.hero .hero-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  opacity: 0.6;
+  z-index: -1;
+
+}
+
+.hero .hero-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero.left-top .hero-image img {
+  object-position: left top;
+}
+
+.hero.center-top .hero-image img {
+  object-position: center top;
+}
+
+.hero.right-top .hero-image img {
+  object-position: right top;
+}
+
+.hero.left-bottom .hero-image img {
+  object-position: left bottom;
+}
+
+.hero.center-bottom .hero-image img {
+  object-position: center bottom;
+}
+
+.hero.right-bottom .hero-image img {
+  object-position: right bottom;
+}
+
+.hero .hero-darken {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.1);
+}
+
+
+/* styles – only for demonstration */
+
+html {
+  font-family: 'Sofia Sans', sans-serif;
+  font-size: calc(1rem + 0.2 * ((100vw - 20rem) / 50));
+  line-height: 1.4rem;
+}
+
+h1,
+h2 {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-weight: 700;
+  line-height: 2.4rem;
+  margin-bottom: 1.4rem;
+}
+
+p {
+  margin-bottom: 1.4rem;
+}
+
+a {
+  color: black;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
+em {
+  opacity: .5;
+}
+
+/* main {
+  width: 90%;
+  max-width: 720px;
+  margin: 3em auto 6em auto;
+} */
+
+nav {
+  position: fixed;
+
+  z-index: 2;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 80%;
+  max-width: 540px;
+  background-color: black;
+  border-radius: 12px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  display: inline-block;
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-weight: 400;
+  letter-spacing: .1em;
+  padding: .5em;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.page-name{
+  /* position: absolute;
+  left: 50%;
+  justify-content: center;
+  border-radius: 12px */
+  position: absolute;
+  top:8% ;
+  left: 8%;
+  text-align: center;
+  z-index: 5;
+  font-weight: 1000;
+  font-variant: small-caps;
+  margin: 2px auto;
+  padding: 2px;
+  
+}
+.tagline{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.p1 .p2{
+ background: black;
+ color: white;
+ mix-blend-mode: multiply;
+}
+
+/* .mouse-pointer{
+  width: 50vw;
+  height: 50vh;
+  background: rgb(55, 55, 55);
+  cursor: url("./images/Logo.svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 512 512'%3e%3cg transform='rotate(45 256 256)'%3e%3crect id='r' x='16' y='216' width='480' height='80' rx='14'/%3e%3cuse href='%23r' transform='rotate(90 256 256)'/%3e%3c/g%3e%3c/svg%3e") 16 16, pointer;
+} */
+.logo {
+  position: absolute;
+  top: 2%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 4px auto;
+  padding: 4px;
+  background-color: aliceblue;
+  z-index: 1;
+  /* opacity: 1; */
+  mix-blend-mode: darken;
+}
+
+@media screen and (min-width: 30em) {
+
+  nav ul li a {
+    padding: .5em 1em;
+    letter-spacing: .15em;
+    opacity: .75;
+  }
+
+  nav ul li a:hover {
+    opacity: 1;
+  }
+
+}
+
+
+/* scroll animation */
+
+/* .hero .hero-darken:before,
+.hero .hero-darken:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.hero .hero-darken:before {
+  top: 104px;
+  width: 30px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.hero .hero-darken:after {
+  top: 112px;
+  width: 2px;
+  height: 12px;
+  background-color: black;
+  border-radius: 1px;
+  animation: scroll 2s infinite linear;
+} */
+
+@keyframes scroll {
+
+  from {
+    top: 112px;
+  }
+
+  to {
+    top: 122px;
+  }
+
+}
